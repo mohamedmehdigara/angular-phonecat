@@ -3,7 +3,10 @@
   <head>
     ...
     <script src="lib/angular/angular.js"></script>
-    <script src="app.js"></script>
+    <script src="app.js">
+      $scope.name = 'world';
+      expect(scope.name).toBe('world');
+    </script>
   </head>
   <body ng-controller="PhoneListController">
     <ul>
@@ -12,5 +15,15 @@
         <p>{{phone.snippet}}</p>
       </li>
     </ul>
+    <p>Total number of phones: {{phones.length}}</p>
+    <p>Hello, {{name}}!</p>
+    <table>
+      <tr>
+        <th>Row number</th>
+      </tr>
+      <tr ng-repeat="i in [0, 1, 2, 3, 4, 5, 6, 7]">
+        <td>{{i + 1}}</td>
+      </tr>
+    </table>
   </body>
 </html>
