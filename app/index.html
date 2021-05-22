@@ -7,6 +7,7 @@
       $scope.name = 'world';
       expect(scope.name).toBe('world');
     </script>
+    <script src="phone-list.component.js"></script>
   </head>
   <body ng-controller="PhoneListController">
     <ul>
@@ -25,5 +26,6 @@
         <td>{{i + 1}}</td>
       </tr>
     </table>
+    <phone-list></phone-list>
   </body>
 </html>
